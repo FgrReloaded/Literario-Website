@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literario</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div>
+        <div class="px-2 pt-2 bg-black">
+            <nav
+                class="border border-white py-4 w-full h-28 rounded-bl-3xl rounded-tr-3xl flex items-center justify-between px-8 menu__bar">
+                <div onclick="window.location.href='/'" class="md:text-5xl text-3xl md:h-10 font-bold text-white uppercase extra-font tracking-wide ">
+                    Literario
+                </div>
+                <div class="flex items-center gap-4 md:gap-8">
+                    <div class="w-5 h-5 cursor-pointer" id="search__icon">
+                        <img src="/images/search.svg" class="invert object-cover" alt="search" />
+                    </div>
+                    <p class="text-white flex items-center mr-4 relative cursor-pointer" id="menu__icon">
+                        <span id="menu__text">Menu</span><span class="text-2xl text-white absolute -right-8 -top-8"
+                            id="menu__cross">+</span>
+                    </p>
+                </div>
+            </nav>
+        </div>
+        <div class="w-full grid grid-cols-2 oswald px-2 overflow-y-hidden menu__box h-[0vh]">
+            <div onclick="window.location.href='/'"
+                class="w-full flex items-center justify-center border border-white text-white py-8 md:text-8xl text-2xl uppercase font-bold hover:bg-white hover:text-black cursor-pointer transition-all">
+                    Home
+            </div>
+            <div onclick="window.location.href='/event.html'"
+                class="w-full flex items-center justify-center border border-white text-white py-8 md:text-8xl text-2xl uppercase font-bold hover:bg-white hover:text-black cursor-pointer transition-all">
+                    Events
+            </div>
+            <div onclick="window.location.href='/team.html'"
+                class="w-full flex items-center justify-center border border-white text-white py-8 md:text-8xl text-2xl uppercase font-bold hover:bg-white hover:text-black cursor-pointer transition-all">
+                    Team
+            </div>
+            <div onclick="window.location.href='/gallery.html'"
+                class="w-full flex items-center justify-center border border-white text-white py-8 md:text-8xl text-2xl uppercase font-bold hover:bg-white hover:text-black cursor-pointer transition-all">
+                    Gallery
+            </div>
+            <div href="#about"
+                class="w-full flex items-center justify-center border border-white text-white py-8 md:text-8xl text-2xl uppercase font-bold rounded-bl-3xl hover:bg-white hover:text-black cursor-pointer transition-all">
+                    About
+            </div>
+            <div onclick="window.location.href='/contact.html'"
+                class="w-full flex items-center justify-center border border-white text-white py-8 md:text-8xl text-2xl uppercase font-bold rounded-br-3xl hover:bg-white hover:text-black cursor-pointer transition-all">
+                    Contact
+            </div>
+        </div>
+        <div class="px-4 md:px-12 overflow-y-hidden search__box">
+            <p class="md:text-lg text-sm font-semibold text-white">Search anything and hit enter</p>
+            <div class="flex items-center md:gap-8  mt-4 md:mt-8">
+                <input type="text" placeholder="Looking for something ?"
+                    class="bg-transparent w-11/12 outline-none inp__search placeholder:raleway font-semibold md:placeholder:text-7xl placeholder:text-xl" />
+                <span class="md:mb-4 cursor-pointer">
+                    <img src="/images/arrow.svg" class="invert object-cover md:w-20 md:h-20 w-10 h-10" alt="search" />
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col mt-8 border-t-2 border-b-2 justify-center border-white mx-4">
+        <div class="flex items-center md:gap-4 gap-2 md:px-8 px-1 pt-4 mb-4">
+            <div class="md:text-4xl text-2xl text-white uppercase font-bold w-[5%]">
+                >
+            </div>
+            <div class="overflow-hidden w-full">
+                <div class="flex gap-4 pr-4 w-[200%] h-full animate-marquee" style="--marquee-duration: 15000ms;">
+                    <div class="flex flex-1 gap-4 h-full">
+                        <div
+                            class="flex flex-1 items-center justify-center text-center bg-black text-white p-1 uppercase font-bold md:text-3xl text-xl whitespace-nowrap">
+                            Welcome to club Literario
+                        </div>
+                        <div
+                            class="flex flex-1 items-center justify-center text-center bg-black text-white p-1 uppercase font-bold md:text-3xl text-xl whitespace-nowrap">
+                            Treasure Hunt
+                        </div>
+                    </div>
+                    <div class="flex flex-1 gap-4 h-full">
+                        <div
+                            class="flex flex-1 items-center justify-center text-center bg-black text-white p-1 uppercase font-bold md:text-3xl text-xl whitespace-nowrap">
+                            Welcome to club Literario
+                        </div>
+                        <div
+                            class="flex flex-1 items-center justify-center text-center bg-black text-white p-1 uppercase font-bold md:text-3xl text-xl whitespace-nowrap">
+                            Treasure Hunt
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center md:gap-2 gap-1 cursor-pointer">
+                <span class="cursor-pointer md:w-5 md:h-5 w-2 h-2">
+                    <img src="/images/arrow.svg" class="invert object-cover" alt="search" />
+                </span> <span class="text-white text-xs md:text-sm  text-center font-bold uppercase italic md:whitespace-nowrap">Find out
+                    more</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="flex gap-2 items-center text-white px-8 mt-4 overflow-x-hidden w-11/12 mx-auto justify-center"
+        id="vertical__line">
+    </div>
+    <div>
+        <p
+            class="text-[21vw] font-bold text-white uppercase extra-font italic flex justify-center text-center mx-auto text__container">
+            <span>L</span>
+            <span>i</span>
+            <span>t</span>
+            <span>e</span>
+            <span>r</span>
+            <span>a</span>
+            <span>r</span>
+            <span>i</span>
+            <span>o</span>
+        </p>
+    </div>
+    <div class="py-4">
+        <div class="flex items-center justify-between flex-wrap">
+            <h1 class="uppercase text-white md:text-7xl sm:text-4xl  font-semibold medium-font md:px-8 px-4">
+                On Going Events
+            </h1>
+            <div class="flex flex-col items-center">
+                <div class="flex">
+                    <span class="mb-4 rotate-90">
+                        <img src="/images/arrow.svg" class="invert object-cover md:w-5 md:h-5 w-3 h-3" alt="search" />
+                    </span>
+                    <span class="mb-4 rotate-90">
+                        <img src="/images/arrow.svg" class="invert object-cover md:w-5 md:h-5 w-3 h-3" alt="search" />
+                    </span>
+                    <span class="mb-4 rotate-90">
+                        <img src="/images/arrow.svg" class="invert object-cover md:w-5 md:h-5 w-3 h-3" alt="search" />
+                    </span>
+                </div>
+                <p class="md:text-4xl text-2xl text-white font-semibold small-font md:px-8 px-4">
+                    All Events
+                </p>
+            </div>
+            <div class="h-[1px] bg-white w-screen"></div>
+            <div class="py-4 w-full relative">
+                <div
+                    class="px-4 py-2 hover:bg-black transition-all relative md:h-max h-max w-[40vw] md:w-[30vw] left-[10%] flex justify-center items-center z-10 group ">
+                    <span
+                        class="absolute z-40 text-white group-hover:text-white transition-all right-4 top-1 font-bold text-2xl md:text-4xl">
+                        +
+                    </span>
+                    <span
+                        class="absolute  z-40 text-white group-hover:text-white left-4 bottom-1 font-bold text-2xl md:text-4xl oswald uppercase small-font">
+                        Treasure Hunt
+                    </span>
+                    <div class="absolute bottom-0 h-20 z-20 w-full bg-gradient-to-b from-black/0 to-black "></div>
+                    <div class="absolute top-0 h-20 z-20 w-full bg-gradient-to-t from-black/0 to-black "></div>
+
+                    <div class="z-10 poster__container w-full h-full">
+                        <img src='/images/events/th.jpeg' alt='bulb' class=" object-cover w-full h-full">
+                    </div>
+                </div>
+                <div
+                    class="absolute left-1/2 -translate-x-1/2 bottom-[10%] text-white flex items-center gap-4 medium-font">
+                    <span class="text-6xl">+</span>
+                    <div class="flex flex-col justify-center gap-2 max-md:mt-8">
+                        <span class="md:text-3xl font-bold max-md:ml-12">23/09/2024</span>
+                        <span class="uppercase md:text-xl max-md:ml-12">Literario</span>
+                    </div>
+                </div>
+                <div class="absolute top-1/2 -translate-y-1/2 z-0 overflow-x-hidden w-full">
+                    <div class="flex gap-4 pr-4 w-[200%] h-full animate-marquee medium-font"
+                        style="--marquee-duration: 15000ms;">
+                        <div class="flex flex-1 gap-4 h-full">
+                            <div
+                                class="flex flex-1 items-center justify-center text-center text-transparent p-1 uppercase font-bold md:text-8xl text-3xl t__stroke_white">
+                                Treasure Hunt
+                            </div>
+                            <div
+                                class="flex flex-1 items-center justify-center text-center text-transparent p-1 uppercase font-bold md:text-8xl text-3xl t__stroke_white">
+                                Literario
+                            </div>
+                        </div>
+                        <div class="flex flex-1 gap-4 h-full">
+                            <div
+                                class="flex flex-1 items-center justify-center text-center text-transparent p-1 uppercase font-bold md:text-8xl text-3xl t__stroke_white">
+                                Treasure Hunt
+                            </div>
+                            <div
+                                class="flex flex-1 items-center justify-center text-center text-transparent p-1 uppercase font-bold md:text-8xl text-3xl t__stroke_white">
+                                Literario
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h-[1px] bg-white w-screen"></div>
+    </div>
+    <div class="relative w-screen h-screen bg-white" id="about">
+        <div class="flex items-center justify-center">
+            <p class="md:text-[15vw] text-[20vw] font-bold text-black uppercase">Ab</p>
+            <div
+                class="md:w-40 md:h-40 w-16 h-16 rounded-full bg-transparent border-2 border-black flex items-center justify-center text-black animate-round uppercase">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                    <circle cx="100" cy="100" r="98" fill="white" />
+
+                    <circle cx="100" cy="100" r="60" fill="white" />
+
+                    <circle cx="100" cy="100" r="5" fill="white" />
+
+                    <path id="textPath" d="M100,50 A50,50 0 0,1 100,150 A50,50 0 0,1 100,50" fill="none" />
+
+                    <text fill="black" font-family="Arial, sans-serif" font-size="12" letter-spacing="2">
+                        <textPath href="#textPath" startOffset="0%">KNOW • ABOUT • OUR • CLUB LITERARIO • </textPath>
+                    </text>
+                </svg>
+            </div>
+            <p class="md:text-[15vw] text-[20vw] font-bold text-black uppercase">ut us</p>
+        </div>
+        <div class="content">
+            <p class="md:text-lg text-sm absolute md:top-1/2 top-[20%] -translate-y-1/2 left-0 text-black uppercase font-semibold medium-font text-center  max-md:mx-auto px-4 py-6 md:w-2/5">
+                Immerse yourself in a world where stories shape realities, words build bridges, and culture finds its true voice.
+            </p>
+            <p class="md:text-lg text-sm absolute md:top-1/2 max-md:bottom-5 md:-translate-y-1/2   md:right-0  text-black uppercase font-semibold medium-font text-center  max-md:mx-auto px-4 py-6 md:w-2/5">
+                Founded in 2015 under the visionary mentorship of Nitin Bhatnagar Sir, Club Literario has blossomed into a dynamic platform where literature, culture, and entertainment come together to inspire, connect, and transform lives.
+            </p>
+            <p class="md:text-lg text-lg absolute max-md:top-1/2 max-md:-translate-y-1/2 md:bottom-5 bottom-0 -translate-x-1/2 left-1/2 text-black uppercase font-semibold medium-font text-center  max-md:mx-auto px-4 py-6 md:w-1/2 w-full">
+                Club
+               <span class="text__stroke">
+                   Literario
+               </span>
+                is more than a literary group—it&apos;s a movement. We celebrate creativity through intimate book discussions, cultural fests, and unforgettable events like DJ nights. Our workshops sharpen skills in poetry and prose, while author meet-ups and engaging experiences open doors to new perspectives in literature, arts, and entertainment.
+            </p>
+        </div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-screen h-full border-b-2 border-black">
+            <img src="/images/bg-path.svg" class="w-full h-full" alt="bg">
+        </div>
+    </div>
+    <div class="bg-white relative">
+        <div class="bg-white h-80 relative">
+            <p
+                class="text-[15vw] md:h-[65%] font-bold text-black uppercase small-font italic absolute md:bottom-0 -bottom-8 w-full text-center">
+                Literario The Home</p>
+        </div>
+        <div class="bg-black h-80 relative">
+            <div class="absolute left-1/2 -translate-x-1/2 text-center small-font flex items-center gap-4">
+                <div id="rounded__circle"
+                    class="w-28 h-28 mb-6 rounded-full bg-transparent border-2 border-white flex items-center justify-center text-white animation-spin relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="98" fill="black" />
+
+                        <circle cx="100" cy="100" r="60" fill="black" />
+
+                        <circle cx="100" cy="100" r="5" fill="black" />
+
+                        <path id="textPath" d="M100,50 A50,50 0 0,1 100,150 A50,50 0 0,1 100,50" fill="none" />
+
+                        <text fill="white" font-family="Arial, sans-serif" font-size="12" letter-spacing="2">
+                            <textPath href="#textPath" startOffset="0%">PDP Workshop • Debate • Cultural Activity •
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+                <p class="md:text-[10vw] text-[50vw] text-white">
+                    F
+                </p>
+            </div>
+            <p
+                class="text-[10vw] text-center font-bold text-white uppercase small-font italic absolute md:bottom-0 -bottom-24 h-[8.45rem] w-full">
+                Personality Development
+            </p>
+        </div>
+        <div class="bg-white "></div>
+    </div>
+    <div class="bg-white py-8">
+        <div class="flex">
+            <nav class="flex flex-col md:px-16 px-6 md:gap-8 gap-4">
+                <p class="italic oswald font-bold text-2xl md:text-3xl uppercase">
+                    Home
+                </p>
+                <p class="italic oswald font-bold text-2xl md:text-3xl uppercase">
+                    Events
+                </p>
+                <p class="italic oswald font-bold text-2xl md:text-3xl uppercase">
+                    Team
+                </p>
+                <p class="italic oswald font-bold text-2xl md:text-3xl uppercase">
+                    Gallery
+                </p>
+            </nav>
+            <div class="flex">
+                <span class="mb-4 rotate-90">
+                    <img src="/images/arrow.svg" class="object-cover md:w-5 md:h-5 w-4" alt="search" />
+                </span>
+                <span class="mb-4 rotate-90">
+                    <img src="/images/arrow.svg" class="object-cover md:w-5 md:h-5 w-4" alt="search" />
+                </span>
+                <span class="mb-4 rotate-90">
+                    <img src="/images/arrow.svg" class="object-cover md:w-5 md:h-5 w-4" alt="search" />
+                </span>
+            </div>
+            <div class="md:h-40 h-20 border-2 border-black md:w-2/5 self-end ml-auto md:mr-8 mr-2 rounded-full relative">
+                <div class="md:pl-12 pl-2 md:py-4 py-1 flex items-center md:h-40 h-20 md:gap-4 gap-1 flex-wrap md:pr-[15%]">
+                    <span class="text__stroke_md uppercase font-bold md:text-2xl text-xs italic cursor-pointer hover:text-black">
+                        Instagram
+                    </span>
+                    <span class="md:w-5 w-2 md:h-5 h-2 block border border-black rounded-full">
+
+                    </span>
+                    <span class="text__stroke_md uppercase font-bold md:text-2xl text-xs italic cursor-pointer hover:text-black">
+                        Linkedin
+                    </span>
+                    <span class="md:w-5 w-2 md:h-5 h-2 block border border-black rounded-full">
+
+                    </span>
+                    <span class="text__stroke_md uppercase font-bold md:text-2xl text-xs italic cursor-pointer hover:text-black">
+                        Facebook
+                    </span>
+                    <span class="md:w-5 w-2 md:h-5 h-2 block border border-black rounded-full">
+
+                    </span>
+                    <span class="text__stroke_md uppercase font-bold md:text-2xl text-xs italic cursor-pointer hover:text-black">
+                        Twitter
+                    </span>
+                </div>
+                <div
+                    class="md:w-40 w-20 md:h-40 h-20 absolute right-0 -top-[0.15rem] ml-auto rounded-full bg-black flex items-center justify-center text-white animate-round uppercase">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="98" fill="black" />
+
+                        <circle cx="100" cy="100" r="60" fill="black" />
+
+                        <circle cx="100" cy="100" r="5" fill="black" />
+
+                        <path id="textPath" d="M100,50 A50,50 0 0,1 100,150 A50,50 0 0,1 100,50" fill="none" />
+
+                        <text fill="white" font-family="Arial, sans-serif" font-size="12" letter-spacing="2">
+                            <textPath href="#textPath" startOffset="0%">SOCIAL MEDIA • FOLLOW US • FOLLOW • </textPath>
+                        </text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="md:px-16 px-4 mt-16">
+            <div class="flex md:gap-8 gap-4 text-sm">
+                <span class="text-xs md:text-xl">
+                    Terms and Conditions
+                </span>
+                <span class="text-xs md:text-xl">
+                    Privacy Policy
+                </span>
+            </div>
+            <div class="flex md:gap-8 gap-2 items-center py-4">
+                <span class="text-xs md:text-xl">
+                    © Literario, All rights reserved
+                </span>
+                <div class="md:w-full w-3/5 flex flex-col gap-4">
+                    <div class="w-full h-[0.5px] bg-black"></div>
+                    <div class="w-full h-[0.5px] bg-black"></div>
+                    <div class="w-full h-[0.5px] bg-black"></div>
+                    <div class="w-full h-[0.5px] bg-black"></div>
+                </div>
+                <p class="md:text-6xl text-3xl text-center font-bold text-black uppercase extra-font italic">
+                    Literario
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/sparkle.js"></script>
+</body>
+
+</html>

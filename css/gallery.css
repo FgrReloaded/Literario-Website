@@ -1,0 +1,65 @@
+.board{
+  margin-top: 5rem;
+  width: 100%;
+  height: 150vh;
+  padding: 0.25rem;
+  display: flex;
+  gap: 0.25rem;
+  perspective: 1000px;
+  background-color: #000;
+  position: relative;
+  z-index: 1;
+}
+
+.row{
+  flex: 1;
+  display: flex;
+  gap: 0.25rem;
+}
+.tile{
+  flex: 1;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.tile-face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.tile-front{
+  background-color: #000;
+}
+.tile-back{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotateX(180deg);
+}
+.tile-front::before,
+.tile-back::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 600% 600%;
+  background-position: inherit;
+  clip-path: inset(0 round 0.25rem);
+}
+
+.tile-front::before{
+  background-image: url("../images/collections.png");
+}
+.tile-back::before{
+  background-image: #000;
+}
+
+.mobile__img{
+  width: 48vw;
+  border: 1px solid #fff;
+  padding: 2px;
+}

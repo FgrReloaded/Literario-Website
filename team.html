@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams • Literario</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-white overflow-x-hidden">
+    <div class="cursor"></div>
+    <div class="relative z-10">
+        <div class="px-2 pt-2 bg-white">
+            <nav
+                class="border border-black py-4 w-full h-28 rounded-bl-3xl rounded-tr-3xl flex items-center justify-between px-8 menu__bar">
+                <div onclick="window.location.href='/'" class="md:text-5xl text-3xl md:h-10 font-bold text-black uppercase extra-font tracking-wide ">
+                    Literario
+                </div>
+                <div class="flex items-center gap-4 md:gap-8">
+                    <div class="w-5 h-5 cursor-pointer" id="search__icon">
+                        <img src="/images/search.svg" class="object-cover" alt="search" />
+                    </div>
+                    <p class="text-black flex items-center mr-4 relative cursor-pointer" id="menu__icon">
+                        <span id="menu__text">Menu</span><span class="text-2xl text-black absolute -right-8 -top-8"
+                            id="menu__cross">+</span>
+                    </p>
+                </div>
+            </nav>
+        </div>
+        <div class="w-full grid grid-cols-2 oswald px-2 overflow-y-hidden menu__box h-[0vh] bg-white">
+            <div onclick="window.location.href='/'"
+                class="w-full flex items-center justify-center border border-black text-black py-8 md:text-8xl text-2xl uppercase font-bold hover:bg-black hover:text-white cursor-pointer transition-all">
+                Home
+            </div>
+            <div onclick="window.location.href='/event.html'"
+                class="w-full flex items-center justify-center border border-black text-black py-8 md:text-8xl text-2xl uppercase font-bold hover:bg-black hover:text-white cursor-pointer transition-all">
+                Events
+            </div>
+            <div onclick="window.location.href='/team.html'"
+                class="w-full flex items-center justify-center border border-black text-black py-8 md:text-8xl text-2xl uppercase font-bold hover:bg-black hover:text-white cursor-pointer transition-all">
+                Team
+            </div>
+            <div onclick="window.location.href='/gallery.html'"
+                class="w-full flex items-center justify-center border border-black text-black py-8 md:text-8xl text-2xl uppercase font-bold hover:bg-black hover:text-white cursor-pointer transition-all">
+                Gallery
+            </div>
+            <div href="#about"
+                class="w-full flex items-center justify-center border border-black text-black py-8 md:text-8xl text-2xl uppercase font-bold rounded-bl-3xl hover:bg-black hover:text-white cursor-pointer transition-all">
+                About
+            </div>
+            <div onclick="window.location.href='/contact.html'"
+                class="w-full flex items-center justify-center border border-black text-black py-8 md:text-8xl text-2xl uppercase font-bold rounded-br-3xl hover:bg-black hover:text-white cursor-pointer transition-all">
+                Contact
+            </div>
+        </div>
+        <div class="px-4 md:px-12 overflow-y-hidden search__box">
+            <p class="md:text-lg text-sm font-semibold text-black">Search anything and hit enter</p>
+            <div class="flex items-center md:gap-8  mt-4 md:mt-8">
+                <input type="text" placeholder="Looking for something ?"
+                    class="bg-transparent w-11/12 outline-none inp__search text-black placeholder:raleway font-semibold md:placeholder:text-7xl placeholder:text-xl" />
+                <span class="md:mb-4 cursor-pointer">
+                    <img src="/images/arrow.svg" class=" object-cover md:w-20 md:h-20 w-10 h-10" alt="search" />
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="absolute z-[1] top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
+        <p class="text-[15vw] text-gray-200 uppercase font-bold small-font tracking-wide">
+            Meet The Team
+        </p>
+    </div>
+    <div class="h-screen md:block hidden bg-white relative">
+        <div>
+            <nav class="absolute p-4 z-30 left-1/2 -translate-x-1/2 top-[10%] text-center cursor-pointer smooth__tran">
+                <h1 class="uppercase text__stroke text-7xl font-bold oswald hover:text-black transition toggle"
+                    data-team="heads">
+                    Heads</h1>
+                <h1 class="uppercase text__stroke text-7xl font-bold oswald hover:text-black transition toggle"
+                    data-team="events">
+                    Events</h1>
+                <h1 class="uppercase text__stroke text-7xl font-bold oswald hover:text-black transition toggle"
+                    data-team="data">
+                    Data</h1>
+                <h1 class="uppercase text__stroke text-7xl font-bold oswald hover:text-black transition toggle"
+                    data-team="editorial">
+                    Editorial</h1>
+                <h1 class="uppercase text__stroke text-7xl font-bold oswald hover:text-black transition toggle"
+                    data-team="pr">
+                    Public Relation</h1>
+                <h1 class="uppercase text__stroke text-7xl font-bold oswald hover:text-black transition toggle"
+                    data-team="web">
+                    Web</h1>
+            </nav>
+            <div class="relative w-full h-screen opacity-100 z-20 wines mt-8">
+                <div class="wrapper">
+                    <svg class="absolute left-0 top-0 w-full h-full overflow-hidden" viewBox="0 0 100 100"
+                        preserveAspectRatio="none">
+                        <path class="path" stroke="#000" fill="#000" stroke-width="2px" dur="10s"
+                            vector-effect="non-scaling-stroke" d="M 0 100 V 100 Q 50 100 100 100 V 100 z" />
+                        <animateMotion dur="10s" repeatCount="indefinite">
+                            <mpath xlink:href="#path" />
+                        </animateMotion>
+                        <div id="wrap" class="absolute left-[25%] w-[150%] h-screen flex items-center mx-[25%]">
+                            <div class="relative flex justify-center z-20 w-[400px] h-[500px] mx-4 bg-black overflow-clip img__block"
+                                style="clip-path: inset(0 0 0 0);">
+                                <div class="relative border border-white w-[80vw] bg-black h-[450px] overflow-hidden">
+                                    <div class="absolute -top-8 -right-8 w-20 h-20 rounded-full bg-white"></div>
+                                    <div class="absolute -bottom-8 -left-8 w-20 h-20 rounded-full bg-white"></div>
+                                    <h1 class="uppercase z-10 absolute top-5 left-5 t__stroke_white text-3xl font-bold oswald hover:text-black transition"
+                                        data-team="heads">
+                                        Web Head
+                                    </h1>
+                                    <h1 class="uppercase z-10 absolute top-16 left-5 text-white text-5xl font-bold oswald hover:text-black transition"
+                                        data-team="events">
+                                        Nitish Singh
+                                    </h1>
+                                    <div class="relative block w-[400px] h-[450px] z-20 p-8 product">
+                                        <img src="/images/team/heads/1.png" alt="team"
+                                            class="w-full h-full object-contain absolute -bottom-24 -right-24">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative flex justify-center z-20 w-[400px] h-[500px] mx-4 bg-[#000] overflow-clip img__block"
+                                style="clip-path: inset(0 0 0 0);">
+                                <div class="relative border border-white w-[80vw] h-[450px] overflow-hidden">
+                                    <div class="absolute -top-8 -right-8 w-20 h-20 rounded-full bg-white"></div>
+                                    <div class="absolute -bottom-8 -left-8 w-20 h-20 rounded-full bg-white"></div>
+                                    <h1 class="uppercase z-10 absolute top-5 left-5 t__stroke_white text-3xl font-bold oswald hover:text-black transition"
+                                        data-team="heads">
+                                        Web Head
+                                    </h1>
+                                    <h1 class="uppercase z-10 absolute top-16 left-5 text-white text-5xl font-bold oswald hover:text-black transition"
+                                        data-team="events">
+                                        Nitish Singh
+                                    </h1>
+                                    <div class="relative block w-[400px] h-[450px] z-20 p-8 product">
+                                        <img src="/images/team/heads/1.png" alt="team"
+                                            class="w-full h-full object-contain absolute -bottom-24 -right-24">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative flex justify-center z-20 w-[400px] h-[500px] mx-4 bg-[#000] overflow-clip img__block"
+                                style="clip-path: inset(0 0 0 0);">
+                                <div class="relative border border-white w-[80vw] h-[450px] overflow-hidden">
+                                    <div class="absolute -top-8 -right-8 w-20 h-20 rounded-full bg-white"></div>
+                                    <div class="absolute -bottom-8 -left-8 w-20 h-20 rounded-full bg-white"></div>
+                                    <h1 class="uppercase z-10 absolute top-5 left-5 t__stroke_white text-3xl font-bold oswald hover:text-black transition"
+                                        data-team="heads">
+                                        Web Head
+                                    </h1>
+                                    <h1 class="uppercase z-10 absolute top-16 left-5 text-white text-5xl font-bold oswald hover:text-black transition"
+                                        data-team="events">
+                                        Nitish Singh
+                                    </h1>
+                                    <div class="relative block w-[400px] h-[450px] z-20 p-8 product">
+                                        <img src="/images/team/heads/1.png" alt="team"
+                                            class="w-full h-full object-contain absolute -bottom-24 -right-24">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative flex justify-center z-20 w-[400px] h-[500px] mx-4 bg-[#000] overflow-clip img__block"
+                                style="clip-path: inset(0 0 0 0);">
+                                <div class="relative border border-white w-[80vw] h-[450px] overflow-hidden">
+                                    <div class="absolute -top-8 -right-8 w-20 h-20 rounded-full bg-white"></div>
+                                    <div class="absolute -bottom-8 -left-8 w-20 h-20 rounded-full bg-white"></div>
+                                    <h1 class="uppercase z-10 absolute top-5 left-5 t__stroke_white text-3xl font-bold oswald hover:text-black transition"
+                                        data-team="heads">
+                                        Web Head
+                                    </h1>
+                                    <h1 class="uppercase z-10 absolute top-16 left-5 text-white text-5xl font-bold oswald hover:text-black transition"
+                                        data-team="events">
+                                        Nitish Singh
+                                    </h1>
+                                    <div class="relative block w-[400px] h-[450px] z-20 p-8 product">
+                                        <img src="/images/team/heads/1.png" alt="team"
+                                            class="w-full h-full object-contain absolute -bottom-24 -right-24">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="md:hidden flex h-max relative flex-col mt-20 overflow-x-hidden">
+        <nav class="p-4 text-center flex flex-wrap gap-4 cursor-pointer w-full justify-center">
+            <h1 class="uppercase text__stroke text-4xl font-bold oswald hover:text-black transition" data-team="heads">
+                Heads</h1>
+            <h1 class="uppercase text__stroke text-4xl font-bold oswald hover:text-black transition" data-team="events">
+                Events</h1>
+            <h1 class="uppercase text__stroke text-4xl font-bold oswald hover:text-black transition" data-team="data">
+                Data</h1>
+            <h1 class="uppercase text__stroke text-4xl font-bold oswald hover:text-black transition"
+                data-team="editorial">
+                Editorial</h1>
+            <h1 class="uppercase text__stroke text-4xl font-bold oswald hover:text-black transition" data-team="pr">
+                Public Relation</h1>
+            <h1 class="uppercase text__stroke text-4xl font-bold oswald hover:text-black transition" data-team="web">
+                Web</h1>
+        </nav>
+        <div class="flex justify-center flex-wrap items-center mt-10 gap-4">
+            <div class="relative flex justify-center z-20  mx-4 bg-black p-4">
+                <div class="relative border border-white w-[80vw] h-[450px] overflow-hidden">
+                    <div class="absolute -top-8 -right-8 w-20 h-20 rounded-full bg-white"></div>
+                    <div class="absolute -bottom-8 -left-8 w-20 h-20 rounded-full bg-white"></div>
+                    <h1 class="uppercase z-10 absolute top-5 left-5 t__stroke_white text-3xl font-bold oswald hover:text-black transition"
+                        data-team="heads">
+                        Web Head
+                    </h1>
+                    <h1 class="uppercase z-10 absolute top-16 left-5 text-white text-5xl font-bold oswald hover:text-black transition"
+                        data-team="events">
+                        Nitish Singh
+                    </h1>
+                    <div class="relative block w-[400px] h-[450px] z-20 p-8 product">
+                        <img src="/images/team/heads/1.png" alt="team"
+                            class="w-full h-full object-contain absolute -bottom-24 -right-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white relative">
+        <div class="bg-white h-80 relative">
+            <p
+                class="text-[15vw] md:h-[65%] font-bold text-black uppercase small-font italic absolute md:bottom-0 -bottom-8 w-full text-center">
+                Literario The Home</p>
+        </div>
+        <div class="bg-black h-80 relative">
+            <div class="absolute left-1/2 -translate-x-1/2 text-center small-font flex items-center gap-4">
+                <div id="rounded__circle"
+                    class="w-28 h-28 mb-6 rounded-full bg-transparent border-2 border-white flex items-center justify-center text-white animation-spin relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="98" fill="black" />
+
+                        <circle cx="100" cy="100" r="60" fill="black" />
+
+                        <circle cx="100" cy="100" r="5" fill="black" />
+
+                        <path id="textPath" d="M100,50 A50,50 0 0,1 100,150 A50,50 0 0,1 100,50" fill="none" />
+
+                        <text fill="white" font-family="Arial, sans-serif" font-size="12" letter-spacing="2">
+                            <textPath href="#textPath" startOffset="0%">PDP Workshop • Debate • Cultural Activity •
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+                <p class="md:text-[10vw] text-[50vw] text-white">
+                    F
+                </p>
+            </div>
+            <p
+                class="text-[10vw] text-center font-bold text-white uppercase small-font italic absolute md:bottom-0 -bottom-24 h-[8.45rem] w-full">
+                Personality Development
+            </p>
+        </div>
+        <div class="bg-white "></div>
+    </div>
+    <div class="bg-white py-8">
+        <div class="flex">
+            <nav class="flex flex-col md:px-16 px-6 md:gap-8 gap-4">
+                <p class="italic oswald font-bold text-2xl md:text-3xl uppercase">
+                    Home
+                </p>
+                <p class="italic oswald font-bold text-2xl md:text-3xl uppercase">
+                    Events
+                </p>
+                <p class="italic oswald font-bold text-2xl md:text-3xl uppercase">
+                    Team
+                </p>
+                <p class="italic oswald font-bold text-2xl md:text-3xl uppercase">
+                    Gallery
+                </p>
+            </nav>
+            <div class="flex">
+                <span class="mb-4 rotate-90">
+                    <img src="/images/arrow.svg" class="object-cover md:w-5 md:h-5 w-4" alt="search" />
+                </span>
+                <span class="mb-4 rotate-90">
+                    <img src="/images/arrow.svg" class="object-cover md:w-5 md:h-5 w-4" alt="search" />
+                </span>
+                <span class="mb-4 rotate-90">
+                    <img src="/images/arrow.svg" class="object-cover md:w-5 md:h-5 w-4" alt="search" />
+                </span>
+            </div>
+            <div
+                class="md:h-40 h-20 border-2 border-black md:w-2/5 self-end ml-auto md:mr-8 mr-2 rounded-full relative">
+                <div
+                    class="md:pl-12 pl-2 md:py-4 py-1 flex items-center md:h-40 h-20 md:gap-4 gap-1 flex-wrap md:pr-[15%]">
+                    <span
+                        class="text__stroke_md uppercase font-bold md:text-2xl text-xs italic cursor-pointer hover:text-black">
+                        Instagram
+                    </span>
+                    <span class="md:w-5 w-2 md:h-5 h-2 block border border-black rounded-full">
+
+                    </span>
+                    <span
+                        class="text__stroke_md uppercase font-bold md:text-2xl text-xs italic cursor-pointer hover:text-black">
+                        Linkedin
+                    </span>
+                    <span class="md:w-5 w-2 md:h-5 h-2 block border border-black rounded-full">
+
+                    </span>
+                    <span
+                        class="text__stroke_md uppercase font-bold md:text-2xl text-xs italic cursor-pointer hover:text-black">
+                        Facebook
+                    </span>
+                    <span class="md:w-5 w-2 md:h-5 h-2 block border border-black rounded-full">
+
+                    </span>
+                    <span
+                        class="text__stroke_md uppercase font-bold md:text-2xl text-xs italic cursor-pointer hover:text-black">
+                        Twitter
+                    </span>
+                </div>
+                <div
+                    class="md:w-40 w-20 md:h-40 h-20 absolute right-0 -top-[0.15rem] ml-auto rounded-full bg-black flex items-center justify-center text-white animate-round uppercase">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="98" fill="black" />
+
+                        <circle cx="100" cy="100" r="60" fill="black" />
+
+                        <circle cx="100" cy="100" r="5" fill="black" />
+
+                        <path id="textPath" d="M100,50 A50,50 0 0,1 100,150 A50,50 0 0,1 100,50" fill="none" />
+
+                        <text fill="white" font-family="Arial, sans-serif" font-size="12" letter-spacing="2">
+                            <textPath href="#textPath" startOffset="0%">SOCIAL MEDIA • FOLLOW US • FOLLOW • </textPath>
+                        </text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="md:px-16 px-4 mt-16">
+            <div class="flex md:gap-8 gap-4 text-sm">
+                <span class="text-xs md:text-xl">
+                    Terms and Conditions
+                </span>
+                <span class="text-xs md:text-xl">
+                    Privacy Policy
+                </span>
+            </div>
+            <div class="flex md:gap-8 gap-2 items-center py-4">
+                <span class="text-xs md:text-xl">
+                    © Literario, All rights reserved
+                </span>
+                <div class="md:w-full w-3/5 flex flex-col gap-4">
+                    <div class="w-full h-[0.5px] bg-black"></div>
+                    <div class="w-full h-[0.5px] bg-black"></div>
+                    <div class="w-full h-[0.5px] bg-black"></div>
+                    <div class="w-full h-[0.5px] bg-black"></div>
+                </div>
+                <p class="md:text-6xl text-3xl text-center font-bold text-black uppercase extra-font italic">
+                    Literario
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script src="js/horizontal.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/teams.js"></script>
+</body>
+
+</html>
