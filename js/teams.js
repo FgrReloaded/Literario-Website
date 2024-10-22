@@ -83,21 +83,40 @@ const revealCards = () => {
 
 }
 
-const generateEle = (team, idx) => {
+const teamData = {
+    heads: ["Ankit Verma", "Adarsh Kumar", "Shashank Shekhar Pandey"],
+    web: ["Nitish Kumar"]
+}
+
+const generateEle = (team, idx, name) => {
     return `
-        <div class="relative flex justify-center z-20 w-[400px] h-[500px] mx-4 bg-[#2b2b2b6b] overflow-clip img__block"
+         <div class="relative flex justify-center z-20 w-[400px] h-[500px] mx-4 bg-black overflow-clip img__block"
                                 style="clip-path: inset(0 0 0 0);">
-                                <div class="relative block w-[400px] h-[500px] z-20 p-8 product">
-                                    <img src="/images/team/${team}/${idx}.png" alt="team" class="w-full h-full object-contain">
+                                <div class="relative border border-white w-[80vw] bg-black h-[450px] overflow-hidden">
+                                    <div class="absolute -top-8 -right-8 w-20 h-20 rounded-full bg-white"></div>
+                                    <div class="absolute -bottom-8 -left-8 w-20 h-20 rounded-full bg-white"></div>
+                                    <h1 class="uppercase z-10 absolute top-5 left-5 t__stroke_white text-3xl font-bold oswald hover:text-black transition"
+                                        data-team="heads">
+                                        Technical Head
+                                    </h1>
+                                    <h1 class="uppercase z-10 absolute top-16 left-5 text-white text-5xl font-bold oswald hover:text-black transition"
+                                        data-team="events">
+                                        ${name}
+                                    </h1>
+                                    <div class="relative block w-[400px] h-[450px] z-20 p-8 product">
+                                        <img src="/images/team/${team}/${idx}.png" alt="team"
+                                            class="w-full h-full object-contain absolute -bottom-24 -right-24">
+                                    </div>
                                 </div>
-        </div>
+                            </div>
 `
 }
 
 const createTeamData = (team) => {
     wrap.innerHTML = "";
     for (let idx = 0; idx < 4; idx++) {
-        const ele = generateEle(team, idx);
+        let name = teamData[team][idx];
+        const ele = generateEle(team, idx, name);
         wrap.innerHTML += ele;
     }
 }
@@ -121,10 +140,10 @@ const showCards = () => {
                     el.classList.add("t__stroke_white")
                 }, 1000);
             });
-            // createTeamData(team);
-
             tl.reversed(!tl.reversed());
             tl.play();
+            // createTeamData(team);
+
         });
     })
 
