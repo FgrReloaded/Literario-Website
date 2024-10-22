@@ -41,14 +41,14 @@ document.querySelectorAll('div[href^="#"]').forEach(anchor => {
 // Registering ScrollTrigger
 document.addEventListener("DOMContentLoaded", () => {
     gsap.from(".nav__text", {
-        x: -200,
+        x: -50,
         opacity: 0,
         duration: 1,
         ease: "power4.out"
     });
     let literarioSpans = textContainer.querySelectorAll("span");
     gsap.from(literarioSpans, {
-        y: -200,
+        x: -50,
         opacity: 0,
         stagger: 0.075,
         duration: .5,
