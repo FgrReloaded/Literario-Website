@@ -1,5 +1,4 @@
 
-// Sparkle effect
 
 document.body.addEventListener('click', createSparkles);
 
@@ -19,8 +18,8 @@ function createSparkle(x, y) {
     sparkle.className = 'sparkle';
 
     const angle = Math.random() * Math.PI * 2;
-    const distance = Math.random() * 60 + 20; // 20-80 pixels
-    const duration = Math.random() * 600 + 400; // 400-1000ms
+    const distance = Math.random() * 60 + 20;
+    const duration = Math.random() * 600 + 400;
 
     const startX = x;
     const startY = y;
