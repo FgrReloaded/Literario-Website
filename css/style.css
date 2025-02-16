@@ -88,8 +88,8 @@ body {
 }
 
 /* hide cursor at small device */
-@media (max-width: 768px){
-    .cursor{
+@media (max-width: 768px) {
+    .cursor {
         display: none;
     }
 }
@@ -148,6 +148,7 @@ body {
     -webkit-text-stroke: 1px #000;
     color: transparent;
 }
+
 @media (min-width: 768px) {
     .text__stroke_md {
         -webkit-text-stroke: 1px #000;
@@ -280,27 +281,29 @@ body {
 }
 
 
-.layout_1_gallery{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform: translateX(0%);
-}
-.layout_2_gallery{
-    padding-top: 0.5rem;
-    position: fixed;
-    top: 25%;
-    left: 10%;
-    transform: translateX(0%);
-}
-.layout_3_gallery{
+.layout_1_gallery {
     position: relative;
     width: 100%;
     height: 100%;
     transform: translateX(0%);
 }
 
-.layout_3_gallery .img{
+.layout_2_gallery {
+    padding-top: 0.5rem;
+    position: fixed;
+    top: 25%;
+    left: 10%;
+    transform: translateX(0%);
+}
+
+.layout_3_gallery {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateX(0%);
+}
+
+.layout_3_gallery .img {
     position: absolute;
     top: 4rem;
     right: 4rem;
@@ -308,13 +311,13 @@ body {
     height: 400px;
 }
 
-.layout_2_gallery .img{
+.layout_2_gallery .img {
     width: 75px;
     height: 100px;
     margin-bottom: 1rem;
 }
 
-.layout_1_gallery .img{
+.layout_1_gallery .img {
     position: absolute;
     width: 100px;
     height: 125px;
@@ -323,63 +326,68 @@ body {
 .layout_1_gallery #img1,
 .layout_1_gallery #img2,
 .layout_1_gallery #img3,
-.layout_1_gallery #img4{
+.layout_1_gallery #img4 {
     top: 0%;
 }
+
 .layout_1_gallery #img5,
 .layout_1_gallery #img6,
 .layout_1_gallery #img7,
-.layout_1_gallery #img8{
+.layout_1_gallery #img8 {
     top: 25%;
 }
+
 .layout_1_gallery #img9,
 .layout_1_gallery #img10 {
     top: 50%;
 }
+
 .layout_1_gallery #img11,
 .layout_1_gallery #img12,
 .layout_1_gallery #img13,
-.layout_1_gallery #img14{
+.layout_1_gallery #img14 {
     top: 75%;
 }
 
 .layout_1_gallery #img8,
-.layout_1_gallery #img14{
+.layout_1_gallery #img14 {
     right: 2rem;
 }
 
-.layout_1_gallery #img7{
+.layout_1_gallery #img7 {
     right: 15%;
 }
-.layout_1_gallery #img6{
+
+.layout_1_gallery #img6 {
     left: 25%;
 }
 
-.layout_1_gallery #img13{
+.layout_1_gallery #img13 {
     left: 75%;
 }
 
 .layout_1_gallery #img10,
 .layout_1_gallery #img12,
-.layout_1_gallery #img4{
+.layout_1_gallery #img4 {
     left: 65%;
 }
 
 .layout_1_gallery #img3,
-.layout_1_gallery #img9{
+.layout_1_gallery #img9 {
     left: 45%;
 }
-.layout_1_gallery #img2{
+
+.layout_1_gallery #img2 {
     left: 15%;
 }
 
 .layout_1_gallery #img1,
 .layout_1_gallery #img5,
-.layout_1_gallery #img11{
+.layout_1_gallery #img11 {
     left: 2rem;
 }
 
-.minimap{
+.minimap {
     position: fixed;
     top: 25%;
     left: 12.5%;
@@ -393,10 +401,93 @@ body {
     opacity: 0;
 }
 
-.up_event__img{
+.up_event__img {
     clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
     transition: all 0.5s;
 }
-.up_event__img.active{
+
+.up_event__img.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Team Cards */
+.team-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #0a0a0a, #121212);
+}
+
+.team-card:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.team-card img {
+    transition: transform 0.5s ease;
+}
+
+.team-card:hover img {
+    transform: scale(1.05);
+}
+
+.corner-effect {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+}
+
+.team-card:hover .corner-effect {
+    width: 70px;
+    height: 70px;
+    border-color: #ffffff;
+}
+
+.subtitle-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    backdrop-filter: blur(4px);
+}
+
+.team-card:hover .subtitle-tag {
+    background: rgba(255, 255, 255, 0);
+    transform: translateY(-2px);
 }
