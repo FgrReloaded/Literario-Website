@@ -128,8 +128,7 @@ function createPaginationButton(text, enabled) {
 document.getElementById('participantSearch').addEventListener('input', (e) => {
   const searchTerm = e.target.value.toLowerCase();
   filteredData = participants.filter(participant =>
-    participant.name.toLowerCase().includes(searchTerm) ||
-    participant.id.toLowerCase().includes(searchTerm)
+    participant.name.toLowerCase().includes(searchTerm)
   );
   currentPage = 1;
   populateTable(filteredData, currentPage);
