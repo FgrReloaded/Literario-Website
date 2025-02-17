@@ -81,6 +81,17 @@ const performers = [
     image: "/images/performers/manjari.jpeg",
   },
   {
+    name: "Arpita Patra",
+    course: "BTech CS",
+    branch: "Core",
+    year: "1st",
+    linkedin: "https://www.linkedin.com/in/arpita-patra-6ab645332",
+    role: "Member",
+    team: "Public Relations",
+    bio: "Arpita is innovative and supportive, always ready to assist and provide solutions. She tries to build genuine connections with everyone and has a friendly nature.",
+    image: "/images/performers/arpita.jpeg",
+  },
+  {
     name: "Sameera Khan",
     course: "BTech CS",
     branch: "Core",
