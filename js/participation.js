@@ -70,10 +70,13 @@ function populateTable(data, page = 1) {
 
   paginatedData.forEach(participant => {
     const row = document.createElement('tr');
-    const firstI = participant.name.split(' ')[0][0]
-    const secondI = participant.name.split(' ')[1][0]
+    const firstI = participant.name.split(' ')[0][0];
+    let secondI;
+    if (participant.name.split(' ').length > 1) {
+      secondI = participant.name.split(' ')?.[1]?.[0]
+    }
     row.innerHTML = `
-        <td class="py-4 px-6">${firstI.toUpperCase()}${secondI.toUpperCase()}-2025-0215-${String(participants.indexOf(participant) + 1).padStart(3, '0')}</td>
+        <td class="py-4 px-6">${firstI.toUpperCase()}${secondI?.toUpperCase()??""}-2025-0215-${String(participants.indexOf(participant) + 1).padStart(3, '0')}</td>
         <td class="py-4 px-6">${participant.name}</td>
         <td class="py-4 px-6 text-gray-400">${participant.email}</td>
       `;
