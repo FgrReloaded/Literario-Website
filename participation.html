@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Participation - Literario</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/participation.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="cursor"></div>
+  <div class="px-2 pt-2 bg-black">
+    <nav
+      class="border border-white py-4 w-full h-28 rounded-bl-3xl rounded-tr-3xl flex items-center justify-between px-8 menu__bar">
+      <div onclick="window.location.href='/'"
+        class="md:text-5xl text-3xl md:h-10 font-bold text-white uppercase extra-font tracking-wide nav__text">
+        Literario
+      </div>
+      <div class="flex items-center gap-4 md:gap-8">
+        <div class="w-5 h-5 cursor-pointer" id="search__icon">
+          <img src="/images/search.svg" class="invert object-cover" alt="search" />
+        </div>
+        <p class="text-white flex items-center mr-4 relative cursor-pointer" id="menu__icon">
+          <span id="menu__text">Menu</span><span class="text-2xl text-white absolute -right-8 -top-8"
+            id="menu__cross">+</span>
+        </p>
+      </div>
+    </nav>
+  </div>
+  <div class="w-full grid grid-cols-2 oswald px-2 overflow-y-hidden menu__box h-[0vh]">
+    <div onclick="window.location.href='/'"
+      class="w-full flex items-center justify-center border border-white text-white py-8 md:text-8xl text-2xl uppercase font-bold hover:bg-white hover:text-black cursor-pointer transition-all">
+      Home
+    </div>
+    <div onclick="window.location.href='/event.html'"
+      class="w-full flex items-center justify-center border border-white text-white py-8 md:text-8xl text-2xl uppercase font-bold hover:bg-white hover:text-black cursor-pointer transition-all">
+      Events
+    </div>
+  </div>
+  <div class="px-4 md:px-12 overflow-y-hidden search__box">
+    <p class="md:text-lg text-sm font-semibold text-white">Search anything and hit enter</p>
+    <div class="flex items-center md:gap-8  mt-4 md:mt-8">
+      <input type="text" placeholder="Looking for something ?"
+        class="bg-transparent w-11/12 outline-none inp__search placeholder:raleway font-semibold md:placeholder:text-7xl placeholder:text-xl" />
+      <span class="md:mb-4 cursor-pointer">
+        <img src="/images/arrow.svg" class="invert object-cover md:w-20 md:h-20 w-10 h-10" alt="search" />
+      </span>
+    </div>
+  </div>
+  </div>
+
+  <div class="px-4 md:px-12 py-8">
+    <h1 class="text-white text-3xl md:text-6xl font-bold medium-font mb-4 md:mb-8">Event Participants</h1>
+
+    <p class="text-gray-300 text-base md:text-lg mb-4 md:mb-6">
+      Below is a list of verified participants who have registered for the event. All entries have been authenticated
+      and confirmed.
+    </p>
+
+    <div class="mb-4 md:mb-8 w-full md:w-1/2">
+      <input type="text" id="participantSearch" placeholder="Search by participant name..."
+        class="w-full bg-transparent border-2 border-white rounded-md px-3 md:px-4 py-2 text-sm md:text-base text-white outline-none">
+    </div>
+
+    <div class="overflow-x-auto -mx-4 md:mx-0">
+      <div class="min-w-full px-4 md:px-0">
+        <table class="w-full text-white border-collapse">
+          <thead>
+            <tr class="border-b-2 border-white">
+              <th class="py-3 md:py-4 px-4 md:px-6 text-left medium-font text-sm md:text-base">Participant ID</th>
+              <th class="py-3 md:py-4 px-4 md:px-6 text-left medium-font text-sm md:text-base">Name</th>
+              <th class="py-3 md:py-4 px-4 md:px-6 text-left medium-font text-sm md:text-base">Email</th>
+            </tr>
+          </thead>
+          <tbody id="participantsTableBody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="pagination" class="flex justify-center items-center flex-wrap gap-2 mt-4 md:mt-6 mb-4 md:mb-8">
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/participation.js"></script>
+</body>
+
+</html>
