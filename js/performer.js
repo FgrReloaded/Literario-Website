@@ -50,7 +50,7 @@ const performers = [
   {
     name: "Muskan Singh",
     course: "BTech ECSE",
-    branch: "AIML",
+    branch: "",
     year: "1st",
     linkedin: "https://www.linkedin.com/in/muskan-singh-454405314",
     role: "Member",
