@@ -99,7 +99,7 @@ const performers = [
     linkedin: "https://www.linkedin.com/in/sameera-khan-908a82313",
     role: "Member",
     team: "Editorial",
-    bio: "An 18 year old, highly enthusiastic towards learning and exploring new things and writing.",
+    bio: "A saudade person who is optimistic and enthusiastic towards learning and exploring new things. Highly passionate about writing.",
     image: "/images/performers/sameera.jpeg",
   },
   {
